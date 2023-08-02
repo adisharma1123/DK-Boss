@@ -1,0 +1,48 @@
+
+function validateSignup() {
+  var newUsername = document.getElementById("newUsername").value;
+  var newPassword = document.getElementById("newPassword").value;
+
+  // Implement your sign-up validation logic here.
+  // For simplicity, we'll assume successful sign-up and just show an alert.
+  alert("Sign Up successful!");
+  return true;
+}
+// Array to store multiple user credentials
+const users = [
+  { username: "adityasharma", password: "aditya123" },
+  { username: "ayushratan", password: "ayush123" },
+  { username: "rajhingar", password: "raj123" },
+  { username: "samarthkulkarni", password: "samarth123" },
+  { username: "priyanshagarwal", password: "priyansh123" },
+  { username: "akshatvatsa", password: "akshat123" },
+  { username: "harshjha", password: "harsh123" },
+  { username: "shubhamupadhyay", password: "shubham123" },
+  { username: "aryan", password: "aryan123" },
+
+
+
+
+
+  // Add more users as needed
+];
+
+function validateForm() {
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+  
+  // Check if the provided username and password match any user in the users array
+  const foundUser = users.find(user => user.username === username && user.password === password);
+  
+  if (foundUser) {
+    // Successful login, redirect to a new page or do other actions.
+    alert("Login successful!");
+    return true;
+  } else {
+    // Failed login, show an error message.
+    document.getElementById("error").innerHTML = "Invalid username or password";
+    return false;
+  }
+}
+
+
